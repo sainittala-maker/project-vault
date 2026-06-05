@@ -1,74 +1,84 @@
 <!DOCTYPE html>
+
 <html>
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Vault</title>
 
-  <title>Project Vault</title>
-
-  <link rel="stylesheet" href="style.css">
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
+<div class="app">
 
-    <h1>PROJECT VAULT</h1>
+```
+<aside class="sidebar">
 
-    <p>
-      HTML • CSS • JavaScript Snippet Library
-    </p>
+    <div class="logo">
+        PROJECT VAULT
+    </div>
 
-  </header>
+    <input
+        type="text"
+        id="search"
+        placeholder="Search snippets..."
+    >
 
-  <main>
+    <div id="categories"></div>
 
-    <h2>Browse Categories</h2>
+</aside>
 
-    <div class="category-grid">
+<section class="snippet-panel">
 
-      <a href="cta.html" class="card-link">
+    <div class="panel-header">
+        Snippets
+    </div>
 
-  <div class="card">
+    <div id="snippetList"></div>
 
-    CTA
+</section>
 
-  </div>
+<section class="viewer-panel">
 
-</a>
+    <div class="tabs">
 
-      <div class="card">
-        Gallery
-      </div>
+        <button class="tab active" id="previewTab">
+            Preview
+        </button>
 
-      <div class="card">
-        Hero
-      </div>
-
-      <div class="card">
-        Countdown
-      </div>
-
-      <div class="card">
-        Typography
-      </div>
-
-      <div class="card">
-        Glassmorphism
-      </div>
-
-      <div class="card">
-        Banner
-      </div>
-
-      <div class="card">
-        Utility
-      </div>
+        <button class="tab" id="codeTab">
+            Code
+        </button>
 
     </div>
 
-  </main>
+    <div id="previewArea">
+
+        Select a snippet
+
+    </div>
+
+    <div id="codeArea" style="display:none;">
+
+        <h3>HTML</h3>
+        <pre id="htmlCode"></pre>
+
+        <h3>CSS</h3>
+        <pre id="cssCode"></pre>
+
+        <h3>JS</h3>
+        <pre id="jsCode"></pre>
+
+    </div>
+
+</section>
+```
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
