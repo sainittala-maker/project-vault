@@ -24,15 +24,13 @@ const categories = [
     ...new Set(snippets.map(s => s.category))
 ];
 
-const container =
-    document.getElementById("categories");
+const container = document.getElementById("categories");
 
 container.innerHTML = "";
 
 categories.forEach(cat => {
 
-    const div =
-        document.createElement("div");
+    const div = document.createElement("div");
 
     div.className = "category";
     div.textContent = cat;
@@ -57,22 +55,19 @@ categories.forEach(cat => {
 function renderSnippets(list) {
 
 ```
-const panel =
-    document.getElementById("snippetList");
+const panel = document.getElementById("snippetList");
 
 panel.innerHTML = "";
 
 list.forEach(snippet => {
 
-    const div =
-        document.createElement("div");
+    const div = document.createElement("div");
 
     div.className = "snippet";
 
-    div.innerHTML = `
-        <strong>${snippet.title}</strong><br>
-        <small>${snippet.description}</small>
-    `;
+    div.innerHTML =
+        "<strong>" + snippet.title + "</strong><br>" +
+        "<small>" + snippet.description + "</small>";
 
     div.onclick = () => showSnippet(snippet);
 
@@ -88,10 +83,9 @@ function showSnippet(snippet) {
 const preview =
     document.getElementById("previewArea");
 
-preview.innerHTML = `
-    <style>${snippet.css}</style>
-    ${snippet.html}
-`;
+preview.innerHTML =
+    "<style>" + snippet.css + "</style>" +
+    snippet.html;
 
 document.getElementById("htmlCode").textContent =
     snippet.html || "";
@@ -105,8 +99,7 @@ document.getElementById("jsCode").textContent =
 
 }
 
-document
-.getElementById("previewTab")
+document.getElementById("previewTab")
 .addEventListener("click", () => {
 
 ```
@@ -119,8 +112,7 @@ document.getElementById("codeArea")
 
 });
 
-document
-.getElementById("codeTab")
+document.getElementById("codeTab")
 .addEventListener("click", () => {
 
 ```
@@ -133,8 +125,7 @@ document.getElementById("codeArea")
 
 });
 
-document
-.getElementById("search")
+document.getElementById("search")
 .addEventListener("input", e => {
 
 ```
